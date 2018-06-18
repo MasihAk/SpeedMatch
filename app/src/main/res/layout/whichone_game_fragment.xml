@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:clickable="true"
+    android:background="@color/global_background"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <TextView
+        android:id="@+id/user_points_text"
+        android:text="@string/user_points_text"
+        android:layout_width="wrap_content"
+        android:padding="@dimen/small_padding"
+        android:textSize="@dimen/large_size"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        android:layout_height="wrap_content" />
+
+    <TextView
+        android:id="@+id/remainig_time_text"
+        android:text="@string/game_remainig_time"
+        app:layout_constraintTop_toBottomOf="@id/user_points_text"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        android:padding="@dimen/small_padding"
+        android:textSize="@dimen/medium_size"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+
+    <Button
+        android:id="@+id/left_number_button"
+        android:layout_width="0dp"
+        android:layout_margin="@dimen/medium_padding"
+        android:layout_height="wrap_content"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toLeftOf="@id/right_number_button"
+        app:layout_constraintTop_toBottomOf="@id/remainig_time_text"/>
+
+    <Button
+        android:id="@+id/right_number_button"
+        android:layout_margin="@dimen/medium_padding"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/remainig_time_text"
+        app:layout_constraintLeft_toRightOf="@id/left_number_button"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content" />
+
+    <Button
+        android:id="@+id/equal_button"
+        android:text="@string/equal"
+        android:layout_margin="@dimen/small_padding"
+        app:layout_constraintTop_toBottomOf="@id/right_number_button"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+
+</android.support.constraint.ConstraintLayout>
